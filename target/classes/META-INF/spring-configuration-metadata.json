@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.emrebozzkurtt.petclinic.PetClinicProperties",
+      "sourceType": "com.emrebozzkurtt.petclinic.PetClinicProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "display-owner-with-pets",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.emrebozzkurtt.petclinic.PetClinicProperties"
+    }
+  ],
+  "hints": []
+}
