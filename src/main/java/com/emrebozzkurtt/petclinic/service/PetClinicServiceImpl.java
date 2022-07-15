@@ -20,7 +20,7 @@ public class PetClinicServiceImpl implements PetClinicService{
 	}
 	
 	@Override
-	public List<Owner> findOwner() {
+	public List<Owner> findOwners() {
 		return ownerRepository.findAll();
 	}
 

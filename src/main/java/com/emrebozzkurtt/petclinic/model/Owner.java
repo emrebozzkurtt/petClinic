@@ -3,6 +3,12 @@ package com.emrebozzkurtt.petclinic.model;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@XmlRootElement
 public class Owner {
 	
 	private int id;
@@ -35,9 +41,12 @@ public class Owner {
 		this.lastName = lastName;
 	}
 	
+	@XmlTransient
+	@JsonIgnore
 	public Set<Pet> getPets() {
 		return pets;
 	}
+	
 	public void setPets(Set<Pet> pets) {
 		this.pets = pets;
 	}

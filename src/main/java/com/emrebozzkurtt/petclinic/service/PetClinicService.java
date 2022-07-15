@@ -7,7 +7,7 @@ import com.emrebozzkurtt.petclinic.model.Owner;
 
 public interface PetClinicService {
 
-	List<Owner> findOwner();
+	List<Owner> findOwners();
 	List<Owner> findOwners(String lastName);
 	Owner findOwner(int id) throws OwnerNotFoundException ;
 	void createOwner(Owner owner);

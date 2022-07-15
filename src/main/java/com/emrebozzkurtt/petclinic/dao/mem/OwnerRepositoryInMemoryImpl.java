@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
@@ -64,7 +65,8 @@ public class OwnerRepositoryInMemoryImpl implements OwnerRepository{
 
 	@Override
 	public void createOwner(Owner owner) {
-		owner.setId(new Date().getSeconds());	
+		Random rnd = new Random();	
+		owner.setId(rnd.nextInt(4, 100));	
 		ownersMap.put(owner.getId(), owner);
 	}
 
