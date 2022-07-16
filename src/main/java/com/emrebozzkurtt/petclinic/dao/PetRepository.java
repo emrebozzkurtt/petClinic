@@ -12,6 +12,6 @@ public interface PetRepository {
 	
 	void createPet(Pet pet);
 	Pet updatePet(Pet pet);
-	void deletePet(Pet pet);
+	void deletePet(int id);
 	void deleteByOwnerId(int id);			
 }

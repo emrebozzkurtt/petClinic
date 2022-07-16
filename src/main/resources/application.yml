@@ -3,3 +3,4 @@ logging:
     name: petclinic.log
   level:
     '[org.springframework.web]': debug
+    '[org.springframework.security]': debug 

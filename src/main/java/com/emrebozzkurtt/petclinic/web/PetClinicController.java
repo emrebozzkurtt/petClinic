@@ -23,6 +23,20 @@ public class PetClinicController {
 		return mav;
 	}
 	
+	@RequestMapping(value = {"/login.html"})
+	public ModelAndView login() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("login");
+		return mav;
+	}
+	
+	@RequestMapping(value = {"/","/index.html"})
+	public ModelAndView index() {
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("index");
+		return mav;
+	}
+	
 	@RequestMapping("/welcome")
 	@ResponseBody
 	public String welcomeClinic() {
