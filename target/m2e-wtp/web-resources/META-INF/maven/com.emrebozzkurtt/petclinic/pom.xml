@@ -14,6 +14,46 @@
   
   <dependencies>
   	<dependency>
+  		<groupId>org.springframework.security</groupId>
+  		<artifactId>spring-security-test</artifactId>
+		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+  	</dependency>
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	</dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-security</artifactId>
+  	</dependency>
+  	<dependency>
+    	<groupId>org.springframework.security</groupId>
+    	<artifactId>spring-security-test</artifactId>
+    	<scope>test</scope>
+	</dependency>
+  	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    </dependency>
+    <dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-data-jpa</artifactId>
+  	</dependency>
+    <dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+		<scope>runtime</scope>
+    </dependency>
+  	<dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-jdbc</artifactId>
+  	</dependency>
+  	<dependency>
   		<groupId>org.springframework.boot</groupId>
   		<artifactId>spring-boot-starter-hateoas</artifactId>
   	</dependency>
@@ -22,16 +62,6 @@
  		<artifactId>hibernate-core</artifactId>
   		<scope>compile</scope>
 	</dependency>
-  	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<scope>test</scope>
-  	</dependency>
-  	<dependency>
-  		<groupId>org.hamcrest</groupId>
-  		<artifactId>hamcrest-library</artifactId>
-		<scope>test</scope>
-  	</dependency>
 	<dependency>
    		<groupId>org.springframework.boot</groupId>
    		<artifactId>spring-boot-starter-thymeleaf</artifactId>
