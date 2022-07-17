@@ -8,7 +8,6 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 
 import com.emrebozzkurtt.petclinic.dao.PetRepository;
-import com.emrebozzkurtt.petclinic.model.Owner;
 import com.emrebozzkurtt.petclinic.model.Pet;
 
 @Repository("petRepository")

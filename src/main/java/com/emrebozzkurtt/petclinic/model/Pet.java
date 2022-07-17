@@ -4,22 +4,15 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Table(name = "pet")
 @Entity
-public class Pet {
+public class Pet extends BaseEntity{
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
-	@Column(name = "petname")
+	@Column(name = "name")
 	private String name;
 	
 	@Column(name = "birthdate")
@@ -28,14 +21,6 @@ public class Pet {
 	@ManyToOne
 	@JoinColumn(name = "owner_id")
 	private Owner owner;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -63,7 +48,7 @@ public class Pet {
 
 	@Override
 	public String toString() {
-		return "Pet [id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", owner=" + owner + "]";
+		return "Pet [id=" + getId() + ", name=" + name + ", birthDate=" + birthDate + ", owner=" + owner + "]";
 	}
 	
 	

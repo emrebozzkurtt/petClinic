@@ -5,12 +5,9 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -19,28 +16,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @XmlRootElement
 @Entity
 @Table(name="owner")
-public class Owner {
+public class Owner extends BaseEntity {
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
+	@NotEmpty
 	@Column(name = "firstname")
 	private String firstName;
 	
+	@NotEmpty
 	@Column(name = "lastname")
 	private String lastName;
 	
 	@OneToMany(mappedBy = "owner")
 	private Set<Pet> pets = new HashSet<>();
-	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	public String getFirstName() {
 		return firstName;
@@ -70,7 +57,7 @@ public class Owner {
 
 	@Override
 	public String toString() {
-		return "Owner [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Owner [id=" + getId() + ", firstName=" + firstName + ", lastName=" + lastName + "]";
 	}
 	
 	

@@ -1,7 +1,6 @@
 package com.emrebozzkurtt.petclinic.dao.mem;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -66,7 +65,7 @@ public class OwnerRepositoryInMemoryImpl implements OwnerRepository{
 	@Override
 	public void createOwner(Owner owner) {
 		Random rnd = new Random();	
-		owner.setId(rnd.nextInt(4, 100));	
+		owner.setId(rnd.nextInt(20, 100));	
 		ownersMap.put(owner.getId(), owner);
 	}
 
